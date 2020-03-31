@@ -38,11 +38,28 @@
 @media (max-width: 576px)
   {
     .side-menu{
-      padding: 2rem 3rem !important;
+  
       width: 100% !important;
   }
-  
-
-
-
+  .side-menu-footer{
+  bottom: 119px !important;
 }
+  // .side-menu .side-navbar .close-icon {
+
+  //   top: 1px !important;
+  //   right: -45px !important;
+  //   }
+  //   .side-menu .side-navbar li {
+   
+  //     font-size: 17px !important;
+  //   }
+  //   .side-menu-footer{
+  //   font-size: 10px !important;
+  //   }
+  //   .side-menu .side-navbar .close-icon {
+    
+  //   top: -13px;
+  //   right: 165px;
+  //   }
+}
+
