@@ -40,6 +40,9 @@ a {
   .navbar-background {
     background: rgba(38, 49, 60, 0.55) !important;
   }
+  .background-image-text {
+    top: 13% !important;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -252,6 +255,7 @@ header {
 .background-image-text {
   position: relative;
   z-index: 1;
+  top: 5%;
 }
 
 .background-image-text .content {
