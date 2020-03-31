@@ -133,7 +133,7 @@ header {
 }
 
 .left-numbers {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -335,7 +335,7 @@ p {
 }
 .side-menu {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   width: 528px;
    transition: 0.6s all;
   right: -548px;
@@ -448,7 +448,7 @@ p {
   background-color: #000;
   opacity: 0.5;
 display: none;
-z-index: 2;
+z-index: 3;
 }
 .side-overlay-active{
   display: block !important;
@@ -466,4 +466,8 @@ z-index: 2;
   transition: all 0.8s ease 500ms !important;
   opacity: 1 !important;
   transform: translateY(0) !important;
+}
+.navbar-background{
+  background: transparent;
+  
 }
