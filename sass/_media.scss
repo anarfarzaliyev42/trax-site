@@ -32,6 +32,9 @@
   .background-image-text {
     top: 13% !important;
   }
+  .sidemenu-btn{
+    right: 10px !important;
+  }
 
 }
 @media (max-width: 1200px)
@@ -41,6 +44,7 @@
   }
 
 }
+
 @media (max-width: 576px)
   {
     .side-menu{
@@ -50,22 +54,14 @@
   .side-menu-footer{
   bottom: 119px !important;
 }
-  // .side-menu .side-navbar .close-icon {
-
-  //   top: 1px !important;
-  //   right: -45px !important;
-  //   }
-  //   .side-menu .side-navbar li {
-   
-  //     font-size: 17px !important;
-  //   }
-  //   .side-menu-footer{
-  //   font-size: 10px !important;
-  //   }
-  //   .side-menu .side-navbar .close-icon {
-    
-  //   top: -13px;
-  //   right: 165px;
-  //   }
+.about-left{
+  margin-bottom: 35px;
+}
 }
 
+@media (max-width: 768px){
+  .left-numbers,.right-icons{
+    display: none !important;
+  }
+  
+}

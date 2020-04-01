@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+  // Wow init
+ 
+   // Wow init up
   $(".owl-carousel").owlCarousel({
     loop: true,
     responsive: {
