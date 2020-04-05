@@ -171,12 +171,12 @@ $(document).ready(function () {
       .find("span")
       .addClass("process-span-active");
   });
-  $(document).on("mouseenter", ".iphone-frame", function () {
+  $(document).on("mouseenter", ".iphone-frame,#apps-slider", function () {
     //Iphone ******************
     let lockBtn = $(".apps-image .lock-icon-btn");
     lockBtn.addClass("lock-icon-btn-active");
   });
-  $(document).on("mouseleave", ".iphone-frame", function () {
+  $(document).on("mouseleave", ".iphone-frame,#apps-slider", function () {
     //Iphone ******************
     let lockBtn = $(".apps-image .lock-icon-btn");
     lockBtn.removeClass("lock-icon-btn-active");
