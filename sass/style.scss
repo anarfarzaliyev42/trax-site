@@ -297,7 +297,7 @@ p {
     #5192e1 100%
   );
 }
-.owl-stage-outer {
+#services .owl-stage-outer {
   bottom: 100px;
 }
 .sidemenu-btn {
@@ -509,7 +509,6 @@ p {
   }
 }
 #our-process {
-
   margin-top: 30px;
   background: #26313c;
 }
@@ -524,7 +523,7 @@ p {
     padding: 70px 15px 0 15px;
     text-align: center;
     display: flex;
-   
+
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -549,14 +548,13 @@ p {
     &::before {
       left: 0;
     }
-    &:first-child{
+    &:first-child {
       &::before {
         display: none;
       }
-      
     }
-    &:last-child{
-      &::after{
+    &:last-child {
+      &::after {
         display: none;
       }
     }
@@ -570,7 +568,7 @@ p {
       border: 1px solid #fff;
       font-size: 28px;
       font-weight: 600;
-    
+
       background: #26313c;
       transition: all 0.8s ease 500ms;
       color: #fff;
@@ -600,45 +598,39 @@ p {
 .side-btn-span-dark {
   background-color: #26313c !important;
 }
-.process-span-active{
+.process-span-active {
   background: linear-gradient(90deg, #5192e1, #23ced5) !important;
   animation-name: fadeIn;
   animation-duration: 1s;
-  
 }
 .apps-image {
- position: relative;
- 
-    
-   width: 235px;
-   height: 475px;
-   top: 14px;
-   left: 58px;
- 
+  position: relative;
 
- 
- div{
-   position: absolute;
- 
- 
- }
+  width: 235px;
+  height: 475px;
+  top: 14px;
+  left: 58px;
+
+  div {
+    position: absolute;
+  }
 }
-.apps-slider-lock-image{
+.apps-slider-lock-image {
   @extend %fullSize;
   left: 14px;
   top: 14px;
-  img{
+
+  img {
     width: 100%;
-   
   }
 }
 
-.apps-slider{
+.apps-slider {
   left: 14px;
   top: 14px;
   @extend %fullSize;
 }
-.lock-icon-btn{
+.lock-icon-btn {
   width: 40px;
   height: 40px;
   border: 3px solid #0b0b0b;
@@ -647,33 +639,53 @@ p {
   background-color: transparent;
   left: 41.5%;
   top: 91%;
-
-
+  z-index: 3;
   opacity: 0;
   transition: 0.3s;
-  
 }
 
-.lock-icon-btn-active{
-
+.lock-icon-btn-active {
   top: 87% !important;
-    opacity:1 !important;
-    transition: 0.3s;
-   
+  opacity: 1 !important;
+  transition: 0.3s;
+
   cursor: pointer;
 }
-.iphone-frame{
+.iphone-frame {
   overflow: hidden;
-
 }
 .apps-item {
-  .icon{
+  .icon {
     font-size: 38px;
     margin-bottom: 20px;
   }
+ 
 }
 .our-apps-header-right {
-  p{
+  p {
     font-size: 15px;
+  }
+}
+#apps-slider {
+  width: 235px;
+  height: 475px;
+  left: 12px;
+  top: 14px;
+  display: none;
+  z-index: 1;
+  .item ,.owl-item{
+    width: 235px;
+    height: 502px;
+    border-radius: 24px;
+    img{
+      width: 100%;
+      height: 103%;
+      border-radius: 24px;
+
+      object-fit: cover;
+    }
+  }
+  .owl-stage-outer{
+    border-radius: 24px;
   }
 }

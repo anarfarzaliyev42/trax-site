@@ -1,6 +1,6 @@
 $(document).ready(function () {
   scrollWorks();
-  $(".owl-carousel").owlCarousel({
+  $("#services .owl-carousel").owlCarousel({
     loop: true,
     responsive: {
       0: {
@@ -19,9 +19,11 @@ $(document).ready(function () {
       0: {
         items: 1,
         onDragged: getActiveSmallScreen,
-      },
+      }
+      
     },
   });
+
 
   //--------------------------------------
 
@@ -209,4 +211,9 @@ $(document).ready(function () {
       }
     }
   }
+  //Iphone lock btn
+  $(document).on('click','.lock-icon-btn',function () {
+    $('#apps-slider').toggle();
+    
+  })
 });
