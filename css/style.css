@@ -36,6 +36,39 @@ li {
 }
 
 @media (max-width: 992px) {
+  .iphone-frame img {
+    width: 215px !important;
+  }
+  .apps-slider-lock-image {
+    left: -9px !important;
+    top: 10px !important;
+  }
+  .apps-slider-lock-image img {
+    width: 197px !important;
+  }
+  .apps-image {
+    top: 10px !important;
+    width: 222px !important;
+    left: 4px !important;
+    height: 400px !important;
+  }
+  .process-bottom {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .process-bottom li {
+    max-width: 300px !important;
+    display: inline-block;
+  }
+  .process-bottom li:nth-child(2)::after, .process-bottom li:nth-child(4)::after {
+    display: none;
+  }
+  .process-bottom li:nth-child(3)::before, .process-bottom li:nth-child(5)::before {
+    display: none;
+  }
   .service-box p {
     font-size: 15px !important;
   }
@@ -53,6 +86,15 @@ li {
   }
   .sidemenu-btn {
     right: 10px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .apps-image {
+    left: -11px !important;
+  }
+  .our-apps-header-right p {
+    font-size: 14px;
   }
 }
 
@@ -75,8 +117,24 @@ li {
 }
 
 @media (max-width: 768px) {
-  .left-numbers, .right-icons {
+  .apps-image {
+    margin: 50px 0;
+  }
+  .process-bottom li::after, .process-bottom li::before {
     display: none !important;
+  }
+  .left-numbers,
+  .right-icons {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px max-width 1200px) {
+  .apps-image {
+    width: 195px !important;
+  }
+  .apps-image {
+    left: 25px !important;
   }
 }
 
@@ -106,6 +164,42 @@ li {
   }
 }
 
+@-webkit-keyframes menuAnime {
+  0% {
+    top: -67px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes menuAnime {
+  0% {
+    top: -67px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 .over-element {
   z-index: 2;
 }
@@ -116,6 +210,26 @@ li {
 
 .bottom30 {
   margin-bottom: 30px;
+}
+
+.bottom20 {
+  margin-bottom: 20px !important;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.padding {
+  padding: 7.5rem 0;
+}
+
+.bottom15 {
+  margin-bottom: 15px !important;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 .light-header-container, .heavy-header-container, .small-header-container {
@@ -172,6 +286,11 @@ li {
   transition: all 0.3s ease-in-out;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.apps-slider-lock-image, .apps-slider {
+  width: 235px;
+  height: 475px;
 }
 
 header {
@@ -231,6 +350,8 @@ header {
 .navbar-nav .nav-item .nav-link {
   padding: 8px 0 !important;
   font-weight: 500;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   font-size: 14px;
   color: #fff;
   position: relative;
@@ -507,7 +628,7 @@ p {
 }
 
 .side-menu {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   width: 528px;
   -webkit-transition: 0.6s all;
@@ -637,14 +758,15 @@ p {
 }
 
 .side-menu-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
-  right: 0;
-  height: 100vh;
   background-color: #000;
   opacity: 0.5;
   display: none;
@@ -699,7 +821,7 @@ p {
 }
 
 #our-process {
-  padding: 7.5rem 0;
+  margin-top: 30px;
   background: #26313c;
 }
 
@@ -716,6 +838,51 @@ p {
 
 .process-bottom li {
   padding: 70px 15px 0 15px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+
+.process-bottom li::after, .process-bottom li::before {
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 115px;
+  background: white;
+  width: 30%;
+  z-index: -1;
+  margin: 0;
+}
+
+.process-bottom li::after {
+  right: 0;
+}
+
+.process-bottom li::before {
+  left: 0;
+}
+
+.process-bottom li:first-child::before {
+  display: none;
+}
+
+.process-bottom li:last-child::after {
+  display: none;
 }
 
 .process-bottom li p {
@@ -729,6 +896,105 @@ p {
   border: 1px solid #fff;
   font-size: 28px;
   font-weight: 600;
+  background: #26313c;
+  -webkit-transition: all 0.8s ease 500ms;
+  transition: all 0.8s ease 500ms;
   color: #fff;
   border-radius: 50%;
+}
+
+.fixedmenu {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  margin: 0 !important;
+  z-index: 3;
+  background: #fff !important;
+  -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: menuAnime;
+          animation-name: menuAnime;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.dark-text-color {
+  color: #26313c !important;
+}
+
+.side-btn-span-dark {
+  background-color: #26313c !important;
+}
+
+.process-span-active {
+  background: -webkit-gradient(linear, left top, right top, from(#5192e1), to(#23ced5)) !important;
+  background: linear-gradient(90deg, #5192e1, #23ced5) !important;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.apps-image {
+  position: relative;
+  width: 235px;
+  height: 475px;
+  top: 14px;
+  left: 58px;
+}
+
+.apps-image div {
+  position: absolute;
+}
+
+.apps-slider-lock-image {
+  left: 14px;
+  top: 14px;
+}
+
+.apps-slider-lock-image img {
+  width: 100%;
+}
+
+.apps-slider {
+  left: 14px;
+  top: 14px;
+}
+
+.lock-icon-btn {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #0b0b0b;
+  cursor: pointer !important;
+  border-radius: 50%;
+  background-color: transparent;
+  left: 41.5%;
+  top: 91%;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.lock-icon-btn-active {
+  top: 87% !important;
+  opacity: 1 !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.iphone-frame {
+  overflow: hidden;
+}
+
+.apps-item .icon {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.our-apps-header-right p {
+  font-size: 15px;
 }

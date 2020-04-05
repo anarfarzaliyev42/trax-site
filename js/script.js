@@ -1,18 +1,27 @@
 $(document).ready(function() {
 
-  // Wow init
- 
-   // Wow init up
+  scrollWorks();
   $(".owl-carousel").owlCarousel({
     loop: true,
     responsive: {
       0: {
-        items: 1
+        items: 1,
+        onDragged: getActiveSmallScreen
       },
       576: {
         items: 3,
         onDragged: getActiveLargeScreen
       }
+    }
+  });
+  $(".apps-image .owl-carousel").owlCarousel({
+    loop: true,
+    responsive: {
+      0: {
+        items: 1,
+        onDragged: getActiveSmallScreen
+      },
+     
     }
   });
 
@@ -180,5 +189,73 @@ $(document).ready(function() {
   })
   
   })
+  //Process hover and Iphone lock-btn hover down
+  $(document).on('mouseenter','.process-bottom li,.iphone-frame',function () {
+    //Iphone ******************
+    let lockBtn=$('.apps-image .lock-icon-btn');
+    lockBtn.addClass('lock-icon-btn-active');
+    //Process *************************
+        let allProcessLi=$('.process-bottom li');
+        
+        
+        allProcessLi.each(function (index,element) {
+          $(element).find('span').removeClass('process-span-active');
+        })
+        $(this).find('span').addClass('process-span-active');
+       
+     
+    
+  })
+  $(document).on('mouseleave','.process-bottom li,.iphone-frame',function () {
+    //Iphone ******************
 
+    
+    let lockBtn=$('.apps-image .lock-icon-btn');
+    lockBtn.removeClass('lock-icon-btn-active');
+        let allProcessLi=$('.process-bottom li');
+        allProcessLi.each(function (index,element) {
+          $(element).find('span').removeClass('process-span-active');
+        })
+        $('.process-bottom li:nth-child(3)').find('span').addClass('process-span-active');
+        
+    
+  })
+  //Process hover and Iphone lock-btn hover up
+
+  function getActiveSmallScreen() {
+    let activeOwlItemActives = $(".owl-stage .active");
+    activeOwlItemActives.each(function(index, element) {
+      $(element)
+      .find(".service-box")
+      .removeClass("active-service-box");
+     
+    });
+  }
+  function scrollWorks() {
+    window.onscroll = function() {getScroll()};
+    function getScroll() {
+    let scrollTop = window.pageYOffset;
+    if(scrollTop>350){
+      
+     $('.logo-default').hide();
+     $('.logo-scrolled').show();
+     $('.nav-link').addClass('dark-text-color');
+     $('.sidemenu-btn span').addClass('side-btn-span-dark');
+      $('nav').addClass('fixedmenu');
+    }
+    else{
+      $('.logo-default').show();
+     $('.logo-scrolled').hide();
+     $('.nav-link').removeClass('dark-text-color');
+     $('.sidemenu-btn span').removeClass('side-btn-span-dark');
+      $('nav').removeClass('fixedmenu');
+    }
+   
+   
+    }
+  }
+
+  
+  
+  
 });

@@ -1,67 +1,120 @@
 @media (max-width: 372px) {
-    .light-header {
-   
-      font-size: 29px !important;
-      
-    }
-    .heavy-header {
-  
-      font-size: 26px !important;
-    }
-    h4 {  
-      font-size: 10px !important;
-      margin-top: 5px !important;
-    }
-    
+  .light-header {
+    font-size: 29px !important;
   }
-@media (max-width:992px){
-  .service-box{
-    p{
+  .heavy-header {
+    font-size: 26px !important;
+  }
+  h4 {
+    font-size: 10px !important;
+    margin-top: 5px !important;
+  }
+}
+@media (max-width: 992px) {
+  .iphone-frame img {
+    width: 215px !important;
+}
+  .apps-slider-lock-image{
+    left: -9px !important;
+    top: 10px !important;
+    img{
+      width: 197px !important;
+    }
+  }
+  .apps-image {
+    top: 10px !important;
+    width: 222px !important;
+    
+      left: 4px !important;
+  
+    height: 400px !important;
+  }
+  .process-bottom {
+    justify-content: center !important;
+    flex-wrap: wrap;
+  }
+  .process-bottom li {
+    max-width: 300px !important;
+    display: inline-block;
+    &:nth-child(2)::after,
+    &:nth-child(4)::after {
+      display: none;
+    }
+    &:nth-child(3)::before,
+    &:nth-child(5)::before {
+      display: none;
+    }
+  }
+  .service-box {
+    p {
       font-size: 15px !important;
     }
-    h4{
+    h4 {
       font-size: 17px !important;
     }
   }
-  .side-menu  {
+  .side-menu {
     padding: 2rem 2.5rem !important;
   }
-  .navbar-background{
+  .navbar-background {
     background: rgba(38, 49, 60, 0.55) !important;
   }
   .background-image-text {
     top: 13% !important;
   }
-  .sidemenu-btn{
+  .sidemenu-btn {
     right: 10px !important;
   }
-
 }
-@media (max-width: 1200px)
-{
-  .side-menu  {
+@media (min-width: 992px) {
+  .apps-image{
+    left: -11px !important;
+
+  }
+  .our-apps-header-right p {
+    font-size: 14px;
+}
+}
+@media (max-width: 1200px) {
+  .side-menu {
     padding: 4rem 3.25rem !important;
   }
-
 }
 
-@media (max-width: 576px)
-  {
-    .side-menu{
+@media (max-width: 576px) {
   
-      width: 100% !important;
+  .side-menu {
+    width: 100% !important;
   }
-  .side-menu-footer{
-  bottom: 119px !important;
-}
-.about-left{
-  margin-bottom: 35px;
-}
+  .side-menu-footer {
+    bottom: 119px !important;
+  }
+  .about-left {
+    margin-bottom: 35px;
+  }
 }
 
-@media (max-width: 768px){
-  .left-numbers,.right-icons{
+@media (max-width: 768px) {
+  .apps-image{
+    margin: 50px 0;
+  }
+  .process-bottom li {
+    &::after,&::before{
+      display: none !important;
+    }
+   }
+  .left-numbers,
+  .right-icons {
     display: none !important;
   }
-  
+}
+@media (min-width:992px && max-width  1200px) {
+  .apps-image {
+ 
+    width: 195px !important;
+    
+  }
+  .apps-image{
+    left: 25px !important;
+  }
 }

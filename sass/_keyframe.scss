@@ -10,3 +10,19 @@
       width: 100%;
     }
   }
+  @keyframes menuAnime{
+    0%{
+  top: -67px;
+    }
+    100%{
+  top: 0;
+    }
+  }
+  @keyframes fadeIn{
+    0%{
+opacity: 0;
+    }
+    100%{
+opacity: 100%;
+    }
+  }
