@@ -11,13 +11,18 @@
   }
 }
 @media (max-width: 992px) {
+  .counters {
+    .counter-num  {
+      font-size: 4rem !important;
+    }
+  }
   .iphone-frame img {
     width: 215px !important;
   }
   #apps-slider {
     width: 190px !important;
     height: 416px !important;
-    top:10px !important;
+    top: 10px !important;
   }
 
   .apps-slider-lock-image {
@@ -34,11 +39,11 @@
     left: 4px !important;
 
     height: 400px !important;
-  
-  .item {
+
+    .item {
       width: 192px !important;
       height: 416px !important;
-   }
+    }
   }
   .process-bottom {
     justify-content: center !important;
@@ -124,5 +129,24 @@
   }
   .apps-image {
     left: 25px !important;
+  }
+}
+@media screen and (max-width: 1266px) {
+  .counters {
+    .counter-num {
+      font-size: 5rem !important;
+    }
+  }
+}
+@media screen and (max-width: 1400px){
+  .counters {
+    .counter-num  {
+      font-size: 5rem !important;
+    }
+  }
+}
+.counters {
+  .counter-num  {
+    font-size: 4rem !important;
   }
 }

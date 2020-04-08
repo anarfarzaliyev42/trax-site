@@ -18,12 +18,46 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 1,
-        onDragged: getActiveSmallScreen,
       }
       
     },
   });
+  $("#price-slider").owlCarousel({
+    loop: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      576:{
+        items:2
+      },
+      992:{
+        items:3
+      }
+      
+    },
+  });
+  $("#teams .owl-carousel").owlCarousel({
+    loop: false,
+    responsive: {
+      0: {
+        items: 1,
+  
+      },
+      512:{
+        items:2
+      },
+      768:{
+        items:3
+      },
+      1200:{
+        items:4
+      }
+    
+     
 
+    },
+  });
 
   //--------------------------------------
 
@@ -216,4 +250,37 @@ $(document).ready(function () {
     $('#apps-slider').toggle();
     
   })
+
+  $(document).on('click','.price-toggle-wrapper .Pricing-toggle-button',function () {
+
+          if($(this).hasClass('year')){   
+            $('.Pricing-toggle-button.month').removeClass('active-price-month');
+          $('.Pricing-toggle-button.month').addClass('active-price-year');
+          $('.Pricing-toggle-button.month').addClass('price-toggle-darkcolor');
+          $('.Pricing-toggle-button.year').addClass('price-toggle-whitecolor');
+        
+              
+         
+
+          }
+          else if($(this).hasClass('month')){
+            $('.Pricing-toggle-button.month').removeClass('active-price-year');
+            $('.Pricing-toggle-button.month').addClass('active-price-month');
+            $('.Pricing-toggle-button.month').removeClass('price-toggle-darkcolor');
+            $('.Pricing-toggle-button.year').removeClass('price-toggle-whitecolor');
+          }
+         
+       
+      
+  })
+  $(document).on("mouseenter", ".pricing-item", function () {
+    //Pricing ******************
+    let allPricingItems=$('.pricing-item');
+    allPricingItems.each(function (index,element) {
+        $(element).removeClass('active-pricing-item');
+      
+    })
+    $(this).addClass('active-pricing-item');
+  });
+ 
 });

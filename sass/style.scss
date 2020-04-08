@@ -3,6 +3,8 @@
 @import "keyframe";
 @import "utilities";
 @import "extend";
+@import "variables";
+
 header {
   position: relative;
   height: 100vh;
@@ -653,14 +655,12 @@ p {
 }
 .iphone-frame {
   overflow: hidden;
-  
 }
 .apps-item {
   .icon {
     font-size: 38px;
     margin-bottom: 20px;
   }
- 
 }
 .our-apps-header-right {
   p {
@@ -674,11 +674,12 @@ p {
   top: 14px;
   display: none;
   z-index: 1;
-  .item ,.owl-item{
+  .item,
+  .owl-item {
     width: 235px;
     height: 502px;
     border-radius: 24px;
-    img{
+    img {
       width: 100%;
       height: 103%;
       border-radius: 24px;
@@ -686,9 +687,303 @@ p {
       object-fit: cover;
     }
   }
-  .owl-stage-outer{
+  .owl-stage-outer {
     border-radius: 24px;
     width: 100%;
     height: 100%;
+  }
+}
+#bg-counters {
+  background-image: url("../assets/images/counter-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 21.2555px;
+}
+.team-content {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
+  text-align: center;
+  height: 108px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: $darkcolor;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  transform: translateY(150%);
+  li {
+    a {
+      height: 30px;
+      line-height: 30px;
+      width: 30px;
+      font-size: 14px;
+      border-radius: 50%;
+      margin: 0 1px;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+}
+.team-box {
+  .image {
+    img {
+      transition: all 0.3s ease-in-out;
+    }
+    overflow: hidden;
+  }
+  &:hover {
+    .image {
+      img {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.2);
+      }
+    }
+
+    h4 {
+      margin-top: -15px;
+      transition: all 0.3s ease-in-out;
+    }
+    .social-icons {
+      transform: translateY(-44%);
+    }
+    .team-content {
+      color: #fff;
+    }
+    .team-content::before {
+      content: "";
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+.team-content::before {
+  content: "";
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-image: linear-gradient(
+    to right,
+    #5192e1 0%,
+    #23ced5 51%,
+    #5192e1 100%
+  );
+  transform: translateY(100%);
+  background-size: 200% auto;
+  transition: all 0.3s ease-in-out;
+}
+.price-toggle-wrapper {
+  position: relative;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  display: inline-flex;
+  margin-bottom: 3.75rem;
+}
+.price-toggle-wrapper .Pricing-toggle-button {
+  position: relative;
+  color: $darkcolor;
+  z-index: 1;
+  font-size: 14px;
+  padding: 10px 110px;
+  font-weight: 600;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.Pricing-toggle-button.month::before {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 100%;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  overflow: hidden;
+
+  z-index: -1;
+  background-size: 200% auto;
+
+  transition: 0.3s;
+  background-image: linear-gradient(
+    to right,
+    #5192e1 0%,
+    #23ced5 51%,
+    #5192e1 100%
+  );
+}
+
+.active-price-year::before {
+  transition: 0.3s;
+  transform: translateX(95%);
+}
+.active-price-month::before {
+  transition: 0.3s;
+  transform: translateX(0%);
+}
+#pricing {
+  background: #f6f7f8;
+}
+.price-toggle-whitecolor {
+  color: #fff !important;
+}
+
+.Pricing-toggle-button.month {
+  color: #fff;
+}
+.Pricing-toggle-button.year {
+  color: $darkcolor;
+}
+.price-toggle-darkcolor {
+  color: $darkcolor !important;
+}
+#teams {
+  &::before {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #f6f7f8;
+    height: 108px;
+  }
+}
+.bottom-half-content {
+  position: relative;
+}
+.bottom-half-content::before {
+  content: "";
+  position: absolute;
+  height: 133px !important;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #f6f7f8;
+}
+.heading-title {
+  h2 {
+    margin-bottom: 2.25rem;
+    font-size: 3rem;
+  }
+}
+
+.pricing-item {
+  position: relative;
+  padding: 2.5rem 1rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+
+  transition: all 0.5s ease;
+
+  text-align: center;
+  overflow: hidden;
+  background: #fff;
+  a {
+    display: block;
+  }
+  .button {
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 0.8rem 2.25rem;
+    line-height: 1;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 500;
+    z-index: 1;
+    border: 1px solid transparent;
+    border-color: #fff;
+    background: #24cdd5;
+    color: #fff;
+  }
+  .pricing-price {
+    padding: 15px 0 14px 0;
+    border-top: 1px solid rgba(139, 144, 157, 0.18);
+    border-bottom: 1px solid rgba(139, 144, 157, 0.18);
+  }
+ 
+}
+#basic::before{
+  content: '\f02e';
+  font-family: "Font Awesome 5 Free", serif;
+  font-weight: 900;
+  position: absolute;
+  top: -30px;
+  right: 15px;
+  font-size: 60px;
+  color: #E84455;
+  z-index: 1;
+}
+#basic::after{
+  content: "- " attr(data-sale) "%";
+  position: absolute;
+  top: 6px;
+  right: 21px;
+  font-size: 14px;
+  color: #fff;
+  z-index: 2;
+}
+.pricing-list {
+  font-size: 14px;
+  padding: 25px 0;
+  display: inline-block;
+  li {
+    margin: 14px 0 14px 25px;
+    text-align: left;
+    font-size: 1rem;
+    position: relative;
+  }
+}
+.pricing-item .pricing-currency {
+  font-size: 3rem;
+  font-weight: 300;
+}
+.pricing-list li::before,
+.price-included::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free", serif;
+  font-weight: 900;
+  position: absolute;
+  top: 2px;
+  left: -25px;
+  color: #b2cb20;
+}
+.pricing-list li.price-not::before {
+  content: "\f00d";
+  font-family: "Font Awesome 5 Free", serif;
+  font-weight: 900;
+  position: absolute;
+  top: 2px;
+  left: -23px;
+  color: #e84455;
+}
+.active-pricing-item {
+  background-color: #26313c;
+  color: #fff;
+  .pricing-list li::before {
+    color: #fff;
+  }
+  .button {
+    border-color: #fff;
+    background: #26313c;
+    transition: 0.2s all;
+    &:hover {
+      background: #fff;
+      color: #384141;
+    }
   }
 }
