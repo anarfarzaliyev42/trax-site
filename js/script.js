@@ -58,7 +58,12 @@ $(document).ready(function () {
 
     },
   });
-
+  jQuery('#grid-mosaic').cubeportfolio({
+    filters: '#mosaic-filter',
+    defaultFilter: '*',
+    animationType: 'quicksand',
+    
+});
   //--------------------------------------
 
   $(document).on("click", ".nav-item .nav-link", function () {
@@ -70,7 +75,7 @@ $(document).ready(function () {
     $(this).addClass("nav-link-active");
   });
   $(document).on("click", ".side-navbar li a", function () {
-    console.log("asda");
+  
 
     let allNavLinks = $(".side-navbar li a");
 
@@ -258,8 +263,12 @@ $(document).ready(function () {
           $('.Pricing-toggle-button.month').addClass('active-price-year');
           $('.Pricing-toggle-button.month').addClass('price-toggle-darkcolor');
           $('.Pricing-toggle-button.year').addClass('price-toggle-whitecolor');
-        
-              
+        //Price change for year
+              $('#basic .pricing-currency').text('$89.55');
+              $('#popular .pricing-currency').text('$179.55');
+              $('#enterprise .pricing-currency').text('$269.55');
+              $('#ultimate .pricing-currency').text('$449.55');
+              $('.pricing-item .pricing-duration').text('year');
          
 
           }
@@ -268,6 +277,12 @@ $(document).ready(function () {
             $('.Pricing-toggle-button.month').addClass('active-price-month');
             $('.Pricing-toggle-button.month').removeClass('price-toggle-darkcolor');
             $('.Pricing-toggle-button.year').removeClass('price-toggle-whitecolor');
+            //Price change for month
+            $('#basic .pricing-currency').text('$9.95');
+            $('#popular .pricing-currency').text('$19.95');
+            $('#enterprise .pricing-currency').text('$29.95');
+            $('#ultimate .pricing-currency').text('$49.95');
+            $('.pricing-item .pricing-duration').text('month');
           }
          
        

@@ -14,6 +14,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
+<!-- load cubeportfolio css file -->
+<link rel="stylesheet" href="assets/cubeportfolio/css/cubeportfolio.min.css">
+
+<!-- load cubeportfolio jQuery plugin -->
 
     <link rel="stylesheet" href="css/style.css" />
 
@@ -691,7 +695,7 @@
             </div></div><div class="owl-item" >
               <div class="item">
                 <div class="col-md-12">
-                    <div class="pricing-item" >
+                    <div class="pricing-item" id="enterprise">
                         <h3 class="font-light darkcolor">Enterprise</h3>
                         <p class="bottom30">The standard version</p>
                         <div class="pricing-price darkcolor">
@@ -709,7 +713,7 @@
             </div></div><div class="owl-item" >
               <div class="item">
                 <div class="col-md-12">
-                    <div class="pricing-item" >
+                    <div class="pricing-item" id="ultimate" >
                         <h3 class="font-light darkcolor">Ultimate</h3>
                         <p class="bottom30">The standard version</p>
                         <div class="pricing-price darkcolor">
@@ -734,6 +738,121 @@
         </div>
       </div>
     </section>
+    <section id="portfolio" class="padding">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 text-center wow fadeIn" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeIn;">
+                  <div class="heading-title darkcolor wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+                      <span class="defaultcolor"> Let's Explore Out </span>
+                      <h2 class="font-normal darkcolor heading_space_half"> Our Portfolio </h2>
+                  </div>
+                  <div class="col-md-6 offset-md-3 heading_space_half">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolores omnis provident quam reiciendis voluptatum.</p>
+                  </div>
+              </div>
+              <div class="col-lg-12">
+                  <div id="mosaic-filter" class="cbp-l-filters bottom30 wow fadeIn text-center d-flex justify-content-center" data-wow-delay="350ms" style="visibility: visible; animation-delay: 350ms; animation-name: fadeIn;">
+                      <div data-filter="*" class="cbp-filter-item cbp-filter-item-active">
+                          <span>All</span>
+                      </div>
+                      <div data-filter=".digital" class="cbp-filter-item">
+                          <span>Digital</span>
+                      </div>
+                      <div data-filter=".design" class="cbp-filter-item">
+                          <span>Design</span>
+                      </div>
+                      <div data-filter=".brand" class="cbp-filter-item">
+                          <span>Brand</span>
+                      </div>
+                      <div data-filter=".graphics" class="cbp-filter-item">
+                          <span>Graphics</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-12">
+                  <div id="grid-mosaic" class="cbp cbp-l-grid-mosaic-flat cbp-caption-active cbp-caption-pushTop cbp-ready" style="height: 640px;"><div class="cbp-wrapper-outer"><div class="cbp-wrapper">
+                      <!--Item 1-->
+                      <div class="cbp-item brand graphics" style="width: 370px; left: 0px; top: 0px; height: 426px;">
+                        <div class="cbp-item-wrapper">
+                          <img src="assets/images/gallery-5.jpg" alt="">
+                          <div class="gallery-hvr whitecolor">
+                              <div class="center-box">
+                                  <a href="images/gallery-5.jpg" class="opens" data-fancybox="gallery" title="Zoom In"> <i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                  <a href="javascript:void(0)" class="opens" title="View Details"> <i class="fas fa-link" aria-hidden="true"></i></a>
+                                  <h4>Sweet Cup</h4>
+                              </div>
+                          </div>
+                      </div></div>
+                      <!--Item 2-->
+                      <div class="cbp-item brand graphics" style="width: 370px; left: 370px; top: 0px;"><div class="cbp-item-wrapper">
+                          <img src="assets/images/gallery-7.jpg" alt="">
+                          <div class="gallery-hvr whitecolor">
+                              <div class="center-box">
+                                  <a href="images/gallery-7.jpg" class="opens" data-fancybox="gallery" title="Zoom In"> <i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                  <a href="javascript:void(0)" class="opens" title="View Details"> <i class="fas fa-link" aria-hidden="true"></i></a>
+                                  <h4>Minimal Things</h4>
+                              </div>
+                          </div>
+                      </div></div>
+                      <!--Item 3-->
+                      <div class="cbp-item design digital graphics" style="width: 370px; left: 740px; top: 0px; height: 426px;"><div class="cbp-item-wrapper" style="">
+                          <img src="assets/images/gallery-11.jpg" alt="">
+                          <div class="gallery-hvr whitecolor">
+                              <div class="center-box">
+                                  <a href="assetimages/gallery-11.jpg" class="opens" data-fancybox="gallery" title="Zoom In"> <i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                  <a href="javascript:void(0)" class="opens" title="View Details"> <i class="fas fa-link" aria-hidden="true"></i></a>
+                                  <h4 class="w-100">Semantic Collection</h4>
+                              </div>
+                          </div>
+                      </div></div>
+                      <!--Item 4-->
+                      <div class="cbp-item brand graphics" style="width: 370px; left: 370px; top: 213px; height: 426px;"><div class="cbp-item-wrapper" style="">
+                          <img src="assets/images/gallery-6.jpg" alt="">
+                          <div class="gallery-hvr whitecolor">
+                              <div class="center-box">
+                                  <a href="images/gallery-6.jpg" class="opens" data-fancybox="gallery" title="Zoom In"> <i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                  <a href="javascript:void(0)" class="opens" title="View Details"> <i class="fas fa-link" aria-hidden="true"></i></a>
+                                  <h4 class="w-100">Wall Clock</h4>
+                              </div>
+                          </div>
+                      </div></div>
+                      <!--Item 5-->
+                      <div class="cbp-item graphics design design" style="width: 370px; left: 0px; top: 427px;"><div class="cbp-item-wrapper" style="">
+                          <img src="assets/images/gallery-8.jpg" alt="">
+                          <div class="gallery-hvr whitecolor">
+                              <div class="center-box">
+                                  <a href="images/gallery-8.jpg" class="opens" data-fancybox="gallery" title="Zoom In"> <i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                  <a href="javascript:void(0)" class="opens" title="View Details"> <i class="fas fa-link" aria-hidden="true"></i></a>
+                                  <h4 class="w-100">Reading Content</h4>
+                              </div>
+                          </div>
+                      </div></div>
+                      <!--Item 6-->
+                      <div class="cbp-item brand digital design" style="width: 370px; left: 740px; top: 427px;"><div class="cbp-item-wrapper" style="">
+                          <img src="assets/images/gallery-9.jpg" alt="">
+                          <div class="gallery-hvr whitecolor">
+                              <div class="center-box">
+                                  <a href="images/gallery-9.jpg" class="opens" data-fancybox="gallery" title="Zoom In"> <i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                  <a href="javascript:void(0)" class="opens" title="View Details"> <i class="fas fa-link" aria-hidden="true"></i></a>
+                                  <h4 class="w-100">Great Objects</h4>
+                              </div>
+                          </div>
+                      </div></div>
+                  </div></div></div>
+                  <div class="col-lg-12">
+                      <!--Load more itema from another html file using ajax-->
+                      <div id="js-loadMore-mosaic" class="cbp-l-loadMore-button ">
+                          <a href="load-more.html" class="cbp-l-loadMore-link border-0 font-13 button gradient-btn whitecolor transition-3" rel="nofollow">
+                              <span class="cbp-l-loadMore-defaultText">Load More (<span class="cbp-l-loadMore-loadItems">6</span>)</span>
+                              <span class="cbp-l-loadMore-loadingText">Loading <i class="fas fa-spinner fa-spin" aria-hidden="true"></i></span>
+                              <span class="cbp-l-loadMore-noMoreLoading d-none">NO MORE WORKS</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
     <div style="margin-top:500px"></div>
     <script
       src="https://kit.fontawesome.com/7ce2b7d60b.js"
@@ -741,7 +860,7 @@
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
-
+    <script type="text/javascript" src="assets/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
